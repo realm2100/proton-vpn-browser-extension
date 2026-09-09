@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-09
+  Description: Updated sorter to place least-loaded servers at the top.
+*/
+
 import type {Logical} from '../vpn/Logical';
 import {
 	connectionAttributes,
@@ -38,8 +44,7 @@ const getStrokeAttributes = (logical?: Logical): string => {
 };
 
 const sorter = new Sorter<Logical, Logical>((l) => l)
-	.asc('Score')
-	.desc('Load')
+	.asc('Load')
 	.asc('Name');
 
 const sortByScore = (logicals: Logical[]) => {
