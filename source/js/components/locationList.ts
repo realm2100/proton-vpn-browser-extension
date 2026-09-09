@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-09
+  Description: Disabled the "Fastest country" UI block for free tier compatibility.
+*/
+
 import {c} from '../tools/translate';
 import {countryList} from './countryList';
 import {recentLocationsSlot} from './recentLocations';
@@ -18,7 +24,7 @@ export const locationList = async (
 		(userContext.tier > 0 && recents.config.value
 			? recentLocationsSlot(await getLastChoices(), countries)
 			: '') +
-		(countryList(countries, userContext, secureCore, countryListHeader, true) ||
+		(countryList(countries, userContext, secureCore, countryListHeader, false) ||
 			`<p class="not-found">
 				${c('Error').t`Unable to load the list`}<br />
 				<small>${
