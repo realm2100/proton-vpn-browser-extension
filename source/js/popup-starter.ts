@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-09
+  Description: Filter out paid servers for free tier users to clean up the UI.
+*/
+
 // TODO: Remove this when VPNBEX-238 is done.
 /* eslint-disable @typescript-eslint/no-use-before-define */
 'use popup';
@@ -607,6 +613,10 @@ export const start = async (area: HTMLElement) => {
 		if (hasAccessToPaidServers && logical.Tier === 0) {
 			return;
 		}
+
+		if (!hasAccessToPaidServers && logical.Tier > 0) {
+      return;
+    }
 
 		if (logical.Tier <= 0) {
 			freeCountries[logical.ExitCountry] = true;
