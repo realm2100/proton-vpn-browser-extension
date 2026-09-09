@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-09
+  Description: Prioritized server load (ascending) inside country lists.
+*/
+
 import {countryBlock} from './countryBlock';
 import {fastestCountry} from './fastestCountry';
 import {comp, Sorter} from '../tools/comp';
@@ -92,6 +98,7 @@ export const countryFilteredList = (
 							.sort(
 								(a, b) =>
 									comp(userTier < a.Tier, userTier < b.Tier) ||
+									comp(a.Load, b.Load) ||
 									comp(b.SearchScore, a.SearchScore) ||
 									comp(a.Name, b.Name),
 							),
