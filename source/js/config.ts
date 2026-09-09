@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-09
+  Description: Changed simplifiedUI to false
+*/
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import * as baseConfig from '../../config';
@@ -64,4 +70,4 @@ export const paidOnly = false;
 
 export const debug = true;
 
-export const simplifiedUi = true;
+export const simplifiedUi = false;
