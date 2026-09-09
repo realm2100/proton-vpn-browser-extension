@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-09
+  Description: Changed ChangeServerShortDelayInSeconds and ChangeServerLongDelayInSeconds to 0
+*/
+
 import {fetchWithUserInfo} from '../../fetchWithUserInfo';
 import {
 	getClientConfigBlockingUpdateTTL,
@@ -76,8 +82,7 @@ export const getChangeServerConfig = async (): Promise<ChangeServerConfig> => {
 
 	return {
 		ChangeServerAttemptLimit: clientConfig.ChangeServerAttemptLimit,
-		ChangeServerShortDelayInSeconds:
-			clientConfig.ChangeServerShortDelayInSeconds,
-		ChangeServerLongDelayInSeconds: clientConfig.ChangeServerLongDelayInSeconds,
+		ChangeServerShortDelayInSeconds: 0,
+		ChangeServerLongDelayInSeconds: 0,
 	};
 };
