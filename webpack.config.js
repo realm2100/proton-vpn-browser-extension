@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-09
+  Description: Edit addon ID
+*/
+
 const path = require('path');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -61,7 +67,7 @@ module.exports = (_, argv, options) => {
 	const adaptToFirefox = (manifest) => {
 		manifest.browser_specific_settings = {
 			gecko: {
-				id: 'vpn@proton.ch',
+				id: 'vpn@realm2100.com',
 				strict_min_version: '109.0',
 			},
 		};
