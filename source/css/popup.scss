@@ -1,3 +1,9 @@
+/*
+  Modified by realm2100
+  Date: 2026-09-10
+  Description: Removed "About free connections" text and the country search box
+*/
+
 @import "./colors";
 @import "./sizes";
 @import "./dark-theme";
@@ -401,6 +407,10 @@ input[type="checkbox"] {
 	align-items: center;
 	margin: 12px 0 8px;
 	gap: 4px;
+}
+
+.quick-connect-button-subtitle {
+	display: none !important;
 }
 
 .server-type {
@@ -1561,8 +1571,8 @@ details {
 }
 
 .filters-bar {
+	display: none;
 	margin: 20px 0;
-	display: flex;
 	flex-direction: row;
 }
 
