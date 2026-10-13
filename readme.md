@@ -1,4 +1,4 @@
-# Fetch upstream and merge
+# Fetch upstream and rebase
 
 ```
 git fetch upstream
