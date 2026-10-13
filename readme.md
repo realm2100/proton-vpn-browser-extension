@@ -1,8 +1,9 @@
 # Fetch upstream and merge
 
 ```
-git pull upstream main
-git push origin main
+git fetch upstream
+git rebase upstream/main
+git push origin main --force-with-lease
 ```
 
 ```
